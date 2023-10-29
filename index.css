@@ -7,7 +7,7 @@
     
 }
 body{
-    background-color: aquamarine;
+    background-color:aquamarine;
 }
 .nav-bar{
     background-color: black;
@@ -39,16 +39,23 @@ ul li a:hover{
    align-items: center;
    
 }
+
 .main-section  button{
     margin-top: 15px;
     background-color: black;
     color: white;
     border-radius: 8px;
     font-size: 20px;
+    /* transition-property: width;
+    transition-duration: 2s;
+    transition-timing-function: ease-in-out; */
+    transition: width 1s linear 2s;
+    
 }
 button:hover{
-    color: red;
-    transition: 0.3s;
+   
+    color: red; 
+    width: 100px;
 }
 .lang-sec{
     margin-top: 3rem;
@@ -78,20 +85,36 @@ button:hover{
    justify-content: space-evenly;
 
 }
+
 .lang1{
     color: orange;
+}
+.lang1:hover{
+    scale: 1.2;
 }
 .lang2{
     color: rgb(0, 191, 255);
 }
+.lang2:hover{
+    scale: 1.2;
+}
 .lang3{
     color: orangered;
+}
+.lang3:hover{
+    scale: 1.2;
 }
 .lang4{
     color: rgb(147, 147, 235);
 }
+.lang4:hover{
+    scale: 1.2;
+}
 .lang5{
     color: rgb(255, 187, 0);
+}
+.lang5:hover{
+    scale: 1.2;
 }
 #project h4{
     margin-top: 3rem;
@@ -113,7 +136,8 @@ button:hover{
 }
 .item{
     background-color: antiquewhite;
-    margin-top: 1rem;
+    margin-top: 1.3rem;
+    margin-bottom: 1.3rem;
     margin-left: 20px;
     border: 3px solid black;
     border-radius: 5px;
@@ -121,6 +145,9 @@ button:hover{
     width: 40rem;
     box-shadow: 0 3px 10px gray;
     
+}
+.item:hover{
+    scale: 1.1 ;
 }
 /* .item1{
     background-image: url("https://images.pexels.com/photos/60504/security-protection-anti-virus-software-60504.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
