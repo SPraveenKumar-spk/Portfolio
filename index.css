@@ -50,7 +50,11 @@ ul li a:hover{
     transition-duration: 2s;
     transition-timing-function: ease-in-out; */
     transition: width 1s linear 2s;
+    cursor: pointer;
     
+}
+.profile{
+    border-radius: 30%;
 }
 button:hover{
    
@@ -166,6 +170,8 @@ button:hover{
 .message button{
     margin-left: 100px;
     font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
     padding: 5px;
     border-radius: 5px;
 }
