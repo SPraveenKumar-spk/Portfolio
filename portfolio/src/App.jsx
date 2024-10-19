@@ -8,6 +8,8 @@ import Footer from "./Components/Footer";
 import ConfettiEffect from "./Components/ConfettiEffect";
 function App() {
   const footref = useRef(null);
+  const projectsref = useRef(null);
+  const onCertificates = useRef(null);
 
   const contactClick = () => {
     if (footref.current) {
@@ -15,14 +17,29 @@ function App() {
     }
   };
 
+  const projectsClick = () => {
+    if (projectsref.current) {
+      projectsref.current.scrollIntoView({ behaviour: "smooth" });
+    }
+  };
+  const certificatesClick = () => {
+    if (onCertificates.current) {
+      onCertificates.current.scrollIntoView({ behaviour: "smooth" });
+    }
+  };
+
   return (
     <>
       <ConfettiEffect />
-      <Navbar onContactClick={contactClick} />
+      <Navbar
+        onContactClick={contactClick}
+        onProjectsClick={projectsClick}
+        onCertificates={certificatesClick}
+      />
       <Hero />
       <Programming />
-      <Projects />
-      <Certificates />
+      <Projects ref={projectsref} />
+      <Certificates ref={onCertificates} />
       <Footer ref={footref} />
     </>
   );

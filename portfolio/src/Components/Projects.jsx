@@ -1,6 +1,8 @@
+import { forwardRef } from "react";
 import { useInView } from "react-intersection-observer";
+import { IoArrowRedo } from "react-icons/io5";
 import TodoWebsite from "../assets/TodoWebsite.png";
-import Image1 from "../assets/Anomaly.jpg";
+import Image1 from "../assets/security.jpg";
 import AgriSmart from "../assets/agrismart.png";
 import ClassSync from "../assets/ClassSync.png";
 import Amazon from "../assets/Amazon_clone.png";
@@ -12,45 +14,45 @@ function ProjectCard({ title, imageUrl, link, animation, isVisible }) {
       className={`mt-4 card mb-3 rounded rounded-4 customShadow ${
         isVisible ? `${animation} visible` : "invisible"
       }`}
-      style={{ height: "30rem", Width: "25rem" }}
     >
       <div className="card-header text-center text-success fs-5 fw-medium">
         {title}
       </div>
-      <div className="card-body">
-        <a href={link} target="_blank" rel="noopener noreferrer">
-          <img className="card-img" src={imageUrl} alt={title} />
-        </a>
+      <div className="card-body text-center">
+        <div className="image-container position-relative">
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            <img className="card-img" src={imageUrl} alt={title} />
+            <div className="overlay">
+              <p className="overlay-text bg-light rounded-2 text-info p-2">
+                Click to view <IoArrowRedo size={30} />
+              </p>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   );
 }
 
-function Projects() {
-  const { ref, inView } = useInView({
-    threshold: 0.2,
+const Projects = forwardRef((props, ref) => {
+  const { ref: inViewRef, inView } = useInView({
+    threshold: 0.1,
   });
 
   return (
-    <div className="container p-5">
+    <div className="container p-5" ref={ref}>
       <h2 className="text-info">Projects</h2>
-      <div className="row" ref={ref}>
-        <div
-          className="col-md-6 d-flex justify-content-center"
-          title="Click to Visit"
-        >
+      <div className="row justify-content-center" ref={inViewRef}>
+        <div className="col-md-10">
           <ProjectCard
             title="ClassSync"
             imageUrl={ClassSync}
-            link="https://classsync-learn.vercel.app"
+            link="https://classync.vercel.app"
             animation="slideInFromBottom"
             isVisible={inView}
           />
         </div>
-        <div
-          className="col-md-6 d-flex justify-content-center"
-          title="Click to Visit"
-        >
+        <div className="col-md-10">
           <ProjectCard
             title="AgriSmart"
             imageUrl={AgriSmart}
@@ -59,10 +61,7 @@ function Projects() {
             isVisible={inView}
           />
         </div>
-        <div
-          className="col-md-6 d-flex justify-content-center"
-          title="Click to Visit"
-        >
+        <div className="col-md-10">
           <ProjectCard
             title="Network Anomaly Detection"
             imageUrl={Image1}
@@ -71,10 +70,7 @@ function Projects() {
             isVisible={inView}
           />
         </div>
-        <div
-          className="col-md-6 d-flex justify-content-center"
-          title="Click to Visit"
-        >
+        <div className="col-md-10">
           <ProjectCard
             title="Transcribe"
             imageUrl={Transcribe}
@@ -83,10 +79,7 @@ function Projects() {
             isVisible={inView}
           />
         </div>
-        <div
-          className="col-md-6 d-flex justify-content-center"
-          title="Click to Visit"
-        >
+        <div className="col-md-10">
           <ProjectCard
             title="To Do"
             imageUrl={TodoWebsite}
@@ -95,10 +88,7 @@ function Projects() {
             isVisible={inView}
           />
         </div>
-        <div
-          className="col-md-6 d-flex justify-content-center"
-          title="Click to Visit"
-        >
+        <div className="col-md-10">
           <ProjectCard
             title="Amazon Clone"
             imageUrl={Amazon}
@@ -110,6 +100,6 @@ function Projects() {
       </div>
     </div>
   );
-}
+});
 
 export default Projects;
