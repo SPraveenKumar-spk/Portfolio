@@ -83,7 +83,7 @@ const Projects = forwardRef((props, ref) => {
           <ProjectCard
             title="To Do"
             imageUrl={TodoWebsite}
-            link="https://todo-app-sand-six-17.vercel.app/"
+            link="https://letsdo-app.vercel.app/"
             animation="slideInFromTop"
             isVisible={inView}
           />
