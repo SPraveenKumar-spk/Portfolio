@@ -7,6 +7,7 @@ import AgriSmart from "../assets/agrismart.png";
 import ClassSync from "../assets/ClassSync.png";
 import Amazon from "../assets/Amazon_clone.png";
 import Transcribe from "../assets/Transcribe.png";
+import ChatMeet from "../assets/ChatMeet.png";
 
 function ProjectCard({ title, imageUrl, link, animation, isVisible }) {
   return (
@@ -57,6 +58,15 @@ const Projects = forwardRef((props, ref) => {
             title="AgriSmart"
             imageUrl={AgriSmart}
             link="https://agrismart-ai.vercel.app"
+            animation="slideInFromLeft"
+            isVisible={inView}
+          />
+        </div>
+        <div className="col-md-10">
+          <ProjectCard
+            title="ChatMeet"
+            imageUrl={ChatMeet}
+            link="https://github.com/SPraveenKumar-spk/ChatMeet"
             animation="slideInFromLeft"
             isVisible={inView}
           />
