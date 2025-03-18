@@ -3,7 +3,7 @@ import AgriSmart from "../assets/Agrismart.png";
 import HealthCare from "../assets/HealthCare.png";
 import Network from "../assets/Network.png";
 import SafeRider from "../assets/SafeRider.png";
-import ChatMeet from "../assets/Chatmeet.png";
+import ChatMeet from "../assets/ChatMeet.png";
 
 const Projects = () => {
   const projectList = [
