@@ -1,7 +1,7 @@
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { FaAngleRight, FaFileCode } from "react-icons/fa6";
 import ResumeFile from "../assets/S__Praveen_Kumar_2025.pdf";
-import Profile from "../assets/profile2.png";
+import Profile from "../assets/Profile.png";
 const HeroSection = () => {
   return (
     <section

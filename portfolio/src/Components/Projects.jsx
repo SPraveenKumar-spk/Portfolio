@@ -1,5 +1,5 @@
 import ClassSync from "../assets/ClassSync.png";
-import AgriSmart from "../assets/AgriSmart.png";
+import AgriSmart from "../assets/Agrismart.png";
 import HealthCare from "../assets/HealthCare.png";
 import Network from "../assets/Network.png";
 import SafeRider from "../assets/SafeRider.png";
