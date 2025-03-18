@@ -15,7 +15,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="fixed top-0 w-full bg-white/95 dark:bg-gray-900/95 shadow-md z-50 backdrop-blur-sm">
+    <header className="fixed top-0 w-full bg-white/70 dark:bg-gray-900/70 shadow-md z-50 ">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <a
           href="#home"
@@ -44,7 +44,7 @@ const Header = () => {
       </div>
 
       <div
-        className={`fixed top-0 right-0 h-full w-64  dark:bg-gray-900 shadow-lg transform transition-transform duration-300 ${
+        className={`fixed top-0 right-0 h-full w-64 bg-white dark:bg-gray-900 shadow-lg transform transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "translate-x-full"
         } md:hidden z-50`}
       >
@@ -70,12 +70,7 @@ const Header = () => {
         </nav>
       </div>
 
-      {isOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
-          onClick={toggleMenu}
-        />
-      )}
+      {isOpen && <div className="fixed z-40 md:hidden" onClick={toggleMenu} />}
     </header>
   );
 };
