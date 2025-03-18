@@ -1,73 +1,48 @@
-import { forwardRef } from "react";
-import { GoMoveToTop } from "react-icons/go";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { MdAttachEmail } from "react-icons/md";
-const Footer = forwardRef((props, ref) => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-  return (
-    <>
-      <footer className=" mb-0" ref={ref}>
-        <div className="waves">
-          <div className="wave" id="wave1"></div>
-          <div className="wave" id="wave2"></div>
-          <div className="wave" id="wave3"></div>
-          <div className="wave" id="wave4"></div>
-        </div>
-        <h3 className="text-light">Contact Me</h3>
-        <ul className="contact">
-          <li>
-            <a
-              href="https://github.com/SPraveenKumar-spk"
-              target="_blank"
-              title="github"
-            >
-              <FaGithub />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/s-praveenkumar/"
-              target="_blank"
-              title="likedin"
-            >
-              <FaLinkedin />
-            </a>
-          </li>
-          <li>
-            <a
-              href="mailto:99210042006@klu.ac.in"
-              target="_blank"
-              title="email"
-            >
-              <MdAttachEmail />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://x.com/im_praveen_s"
-              target="_blank"
-              title="twitter"
-            >
-              <FaTwitter />
-            </a>
-          </li>
-        </ul>
 
-        <p className="mt-2 text-light">
-          &copy;2024 S.Praveen Kumar | All rights reserved.
-        </p>
-        <button
-          onClick={scrollToTop}
-          className="btn btn-light  move-to-top"
-          title="move to top"
-        >
-          <GoMoveToTop />
-        </button>
-      </footer>
-    </>
+const Footer = () => {
+  return (
+    <footer className="bg-gray-50 dark:bg-gray-900 py-6 px-6 sm:px-12 lg:px-24 border-t border-gray-200 dark:border-gray-700">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="text-center md:text-left">
+          <p className="text-gray-600 dark:text-gray-300 text-sm">
+            © 2025{" "}
+            <span className="font-semibold text-blue-600 dark:text-blue-400">
+              S. Praveen Kumar
+            </span>
+            . All rights reserved.
+          </p>
+        </div>
+
+        <div className="flex space-x-6">
+          <a
+            href="https://github.com/SPraveenKumar-spk"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 transform hover:scale-110"
+          >
+            <FaGithub size={24} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/spraveenkumar1501/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 transform hover:scale-110"
+          >
+            <FaLinkedin size={24} />
+          </a>
+          <a
+            href="https://x.com/im_praveen_s"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300 transform hover:scale-110"
+          >
+            <FaTwitter size={24} />
+          </a>
+        </div>
+      </div>
+    </footer>
   );
-});
+};
 
 export default Footer;
