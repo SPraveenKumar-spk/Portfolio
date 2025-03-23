@@ -24,13 +24,14 @@ const Projects = () => {
       link: "https://github.com/SPraveenKumar-spk/SafeRider",
     },
     {
-      title: "Network Anomaly Detection",
+      title: "Healthcare",
       description:
-        "A cybersecurity tool using ML to detect unusual network activities.",
-      tech: ["Python", "Scikit-learn", "Pandas", "Matlplotlib", "numpy"],
-      image: Network,
-      link: "https://github.com/SPraveenKumar-spk/Network_Anomaly_Detection",
+        "A patient management system with appointment and telemedicine features.",
+      tech: ["React JS", "Tailwind CSS", "Java Springboot", "MySQL"],
+      image: HealthCare,
+      link: "https://github.com/SPraveenKumar-spk/HealthCare",
     },
+
     {
       title: "AgriSmart",
       description:
@@ -48,13 +49,14 @@ const Projects = () => {
       image: AgriSmart,
       link: "https://github.com/SPraveenKumar-spk/AgriSmart",
     },
+
     {
-      title: "Healthcare",
+      title: "Network Anomaly Detection",
       description:
-        "A patient management system with appointment and telemedicine features.",
-      tech: ["React JS", "Tailwind CSS", "Java Springboot", "MySQL"],
-      image: HealthCare,
-      link: "https://github.com/SPraveenKumar-spk/HealthCare",
+        "A cybersecurity tool using ML to detect unusual network activities.",
+      tech: ["Python", "Scikit-learn", "Pandas", "Matlplotlib", "numpy"],
+      image: Network,
+      link: "https://github.com/SPraveenKumar-spk/Network_Anomaly_Detection",
     },
     {
       title: "ChatMeet",
